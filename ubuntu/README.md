@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm64v8` builds of [the `ubuntu` official image](https://hub.docker.com/_/ubuntu) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,11 +26,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`20.04`, `focal-20230605`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-focal-amd64-20230605-19354505&id=19354505a650f2bfd5e2441c56ca09cc488abeb4)
--	[`22.04`, `jammy-20230605`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-amd64-20230605-ab2192b8&id=ab2192b8d9a2a01920e4db4cb79f649dd77a2dad)
--	[`22.10`, `kinetic-20230605`, `kinetic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-kinetic-amd64-20230605-42263b18&id=42263b1857cc4495659cc2d79647f46aff013247)
--	[`23.04`, `lunar-20230615`, `lunar`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-lunar-amd64-20230615-3537c573&id=3537c5732f5b3fc814f5762acf34b890a8d79a13)
--	[`23.10`, `mantic-20230607`, `mantic`, `devel`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-mantic-amd64-20230607-533e5820&id=533e58208b1772f1c89f31465a8663cfc79b1ae9)
+-	[`20.04`, `focal-20230605`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-focal-arm64v8-20230605-c25f0480&id=c25f0480a72f94d4d0aa59f61653e8165055fa21)
+-	[`22.04`, `jammy-20230605`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-arm64v8-20230605-e18211f1&id=e18211f13eacf336e4af4ca5e999ea71270014c0)
+-	[`22.10`, `kinetic-20230605`, `kinetic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-kinetic-arm64v8-20230605-f4da9864&id=f4da98640c618f685039206cfb4702667596f43d)
+-	[`23.04`, `lunar-20230615`, `lunar`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-lunar-arm64v8-20230615-10fab6f0&id=10fab6f0dd94d3e9ed19d9510740c7e460a4d29c)
+-	[`23.10`, `mantic-20230607`, `mantic`, `devel`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-mantic-arm64v8-20230607-abeca674&id=abeca6743fae26945b9cf3ddc9983e54c0d419da)
+
+[![arm64v8/ubuntu build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ubuntu.svg?label=arm64v8/ubuntu%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ubuntu/)
 
 # Quick reference (cont.)
 
@@ -63,9 +67,9 @@ Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue throu
 
 This image is built from official rootfs tarballs provided by Canonical (see `dist-*` tags at https://git.launchpad.net/cloud-images/+oci/ubuntu-base).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `arm64v8/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `arm64v8/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `arm64v8/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 
